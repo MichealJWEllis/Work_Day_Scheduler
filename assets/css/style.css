@@ -8,7 +8,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1; 
-  background: url(/assets/images/279553.jpg) no-repeat center center fixed; 
+  background: url(../images/279553.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -50,10 +50,25 @@ textarea{
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
+  border-bottom: 1px solid white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  
 }
+.mainRow {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 80px;
+  color: white;
+  align-content: center;
+  background-color:black;
+  opacity: .7;
+  border-radius: 15px;
+  font-size: 25px;
+  
+}
+
 
 .hour {
   background-color: #ffffff;

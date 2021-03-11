@@ -1,5 +1,5 @@
 // Display current date 
-const yourDate = moment().format("MMMM Do YYYY");
+const yourDate = moment().format("MMMM - Do , YYYY");
 const displayDate = document.getElementById('currentDay')
 
 displayDate.innerHTML = yourDate;

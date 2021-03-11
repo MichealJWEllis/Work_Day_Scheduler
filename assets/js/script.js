@@ -4,7 +4,7 @@ const displayDate = document.getElementById('currentDay')
 const displayTime = document.getElementById('currentTime')
 displayDate.innerHTML = yourDate;
 
-
+// Will reload current time on HTML
 setInterval(function constTime() {
   const yourTime = moment().format("h:mm:ss A")
   displayTime.innerHTML = yourTime;

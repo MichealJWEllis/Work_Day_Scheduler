@@ -35,18 +35,19 @@ textarea{
   opacity: .8;
   
 }
+
 .h1color {
   color: burlywood;
   font-weight: bold;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
 .time-block{
   text-align: center;
   border-radius: 15px;
+}
+.col {
+  align-items: center;
+  
 }
 
 .row {
@@ -62,18 +63,11 @@ textarea{
   height: 80px;
   color: white;
   align-content: center;
+  justify-content: center;
   background-color:black;
-  opacity: .7;
   border-radius: 15px;
   font-size: 25px;
   
-}
-
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
 }
 
 .past {
@@ -91,6 +85,12 @@ textarea{
   color: white;
 }
 
+.addTaskBtn {
+  border-radius: 0 15px;
+  background-color: green;
+  padding: 10px;
+  color: white;
+}
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

@@ -17,8 +17,8 @@ setInterval(function constTime() {
 // 2. red equals current hour
 // 3. green eqauls future hours
 function updateByTheHour() {
-  var currentHour = moment().hour("h:mm A");
-  var scheduleTime = getElementById("#timeSlot");
+  var currentHour = moment().format("h:mm A");
+  var scheduleTime = document.querySelectorAll("#timeSlot");
   console.log(scheduleTime);
   console.log(currentHour);
   // $(".time-block").each(function () {

@@ -18,9 +18,12 @@ setInterval(function constTime() {
 // 3. green eqauls future hours
 function updateByTheHour() {
   var currentHour = moment().format("h:mm A");
-  var scheduleTime = document.querySelectorAll("#timeSlot");
+  var scheduleTime = document.querySelectorAll("div");
+  var test = document.getElementById("timeSlot").innerHTML = scheduleTime.innerHTML;
   console.log(scheduleTime);
   console.log(currentHour);
+  console.log(test);
+
   // $(".time-block").each(function () {
   //     var blockHour = parseInt($(this).attr("id").split(" ")[0]);
 
@@ -38,4 +41,6 @@ function updateByTheHour() {
 }
 //this calls the function updateByTheHour
 updateByTheHour();
+
+// might be able to use the NodeList to iterate over each node and compare it to the current time. 
 

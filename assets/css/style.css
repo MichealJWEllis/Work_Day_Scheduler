@@ -15,6 +15,9 @@ body {
   background-size: cover;
   
 }
+.redtext {
+  background-color: blue !important;
+}
 
 
 textarea{

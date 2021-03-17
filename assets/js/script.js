@@ -1,8 +1,13 @@
-// Display current date 
+
 const yourDate = moment().format("MMMM - Do , YYYY");
 const displayDate = document.getElementById('currentDay')
+const currentHour = moment().format("HH:mm");
+const colorChange = document.querySelectorAll("#colorSwitch");
+const timeOfDay = document.querySelectorAll("#timeSlot");
+const colorChange_arr = Array.prototype.slice.call(colorChange);
+const timeOfDay_arr = Array.prototype.slice.call(timeOfDay);
 
-displayDate.innerHTML = yourDate;
+// displayDate.innerHTML = yourDate;
 
 // Will reload current time on HTML
 setInterval(function constTime() {
@@ -12,35 +17,22 @@ setInterval(function constTime() {
 
 }, 1000)
 
-// this will color the teaxtarea based on the timeline where the colors 1-3 are defined as the following:-
-// 1. grey equals past the hour
-// 2. red equals current hour
-// 3. green eqauls future hours
+
 function updateByTheHour() {
-  var currentHour = moment().format("h:mm A");
-  var scheduleTime = document.querySelectorAll("div");
-  var test = document.getElementById("timeSlot").innerHTML = scheduleTime.innerHTML;
-  console.log(scheduleTime);
-  console.log(currentHour);
-  console.log(test);
+  for (i = 0; i < timeOfDay_arr.length; i++) {
+    let x = timeOfDay_arr[i].innerText;
+    let y = moment(x,["h:mm A"]).format("HH:mm")
+      
+      if (parseInt(y) < parseInt(currentHour)) {
+        console.log('past', colorChange_arr[i])
+        
+      } else if (parseInt(y) === parseInt(currentHour)){
+        console.log('present', colorChange_arr[i])
 
-  // $(".time-block").each(function () {
-  //     var blockHour = parseInt($(this).attr("id").split(" ")[0]);
+      } else {
+        console.log('future', colorChange_arr[i])
+      }
+  }
+} 
 
-  //     if (blockHour < currentHour) {
-  //         $(this).addClass("past");
-  //     } else if (blockHour === currentHour) {
-  //         $(this).removeClass("past");
-  //         $(this).addClass("present");
-  //     } else {
-  //         $(this).removeClass("past");
-  //         $(this).removeClass("present");
-  //         $(this).addClass("future");
-  //     }
-  // });
-}
-//this calls the function updateByTheHour
 updateByTheHour();
-
-// might be able to use the NodeList to iterate over each node and compare it to the current time. 
-

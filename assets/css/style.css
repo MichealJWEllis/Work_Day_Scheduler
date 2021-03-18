@@ -12,13 +12,8 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  
+  background-size: cover; 
 }
-.redtext {
-  background-color: blue !important;
-}
-
 
 textarea{
   background: transparent;
@@ -28,9 +23,7 @@ textarea{
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   padding: 10px;
-  margin: 10px;
-
-  
+  margin: 10px;  
 }
 
 .jumbotron {
@@ -39,8 +32,7 @@ textarea{
   border-radius: 0;
   border-bottom: 1px solid black;
   padding: 20px;
-  opacity: .8;
-  
+  opacity: .8; 
 }
 
 .h1color {
@@ -53,14 +45,11 @@ textarea{
   border-radius: 15px;
 }
 
-
 .row {
   border-bottom: 1px solid white;
   margin: 10px;
   padding: 20px;
-  font-size: 20px;
-  
-  
+  font-size: 20px;  
 }
 .hour {
   background: transparent;
@@ -87,18 +76,22 @@ textarea{
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color:rgba(211, 211, 211, 0.6);
+  color: black;
+  border-radius: 5px;
+  
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color:rgba(255, 105, 97, 0.6);
+  color: black;
+  border-radius: 5px;
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color:rgba(119, 221, 119, 0.6);
+  color: black;
+  border-radius: 5px;
 }
 
 
@@ -109,15 +102,16 @@ textarea{
   outline: none !important; 
   background-color: grey;
   color: white;
-  opacity: .8;
+  
   
 }
 
-.saveBtn i:hover {
-  font-size: 5px;
-  transition: all .3s ease-in-out;
-  border: none;
-  outline: none !important; 
+.saveBtn:hover {
+  font-size: 20px;
+  transition: all .2s ease-in-out;
+  border-left: 1px solid white;
+  outline: none !important;
+  background-color: rgba(0, 128, 0, 0.719); 
 }
 
 

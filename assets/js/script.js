@@ -7,6 +7,7 @@ const timeOfDay = document.querySelectorAll("#timeSlot");
 // array conversions from NodeLists
 const colorChange_arr = Array.prototype.slice.call(colorChange);
 const timeOfDay_arr = Array.prototype.slice.call(timeOfDay);
+displayDate.innerHTML = yourDate;
 
 // This function will display and load current time on HTML
 setInterval(function constTime() {

@@ -7,6 +7,7 @@ const timeOfDay = document.querySelectorAll("#timeSlot");
 // array conversions from NodeLists
 const colorChange_arr = Array.prototype.slice.call(colorChange);
 const timeOfDay_arr = Array.prototype.slice.call(timeOfDay);
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 // displayDate.innerHTML = yourDate;
 
@@ -26,21 +27,24 @@ function colorChangeViaHour() {
 
     if (parseInt(y) < parseInt(currentHour)) {
       console.log('past', colorChange_arr[i])
-      $('textarea').addClass("past");
-
-    } else if (parseInt(y) === parseInt(currentHour)) {
+      $(colorChange_arr[i]).addClass("past");
+      
+    } else if (parseInt(y) == parseInt(currentHour)) {
       console.log('present', colorChange_arr[i])
-      $('textarea').addClass("present");
-
-    } else {
+      $(colorChange_arr[i]).addClass("present");
+      
+    } else  {
       console.log('future', colorChange_arr[i])
-      $('textarea').addClass("future");
-
+      $(colorChange_arr[i]).addClass("future");
     }
   }
 }
 
-$("button").click(function () {
-  console.log("clicked");
-})
+
+// $("button").click(function () {
+//   console.log("clicked");
+//   var task = document.getElementById('#btn')
+//   localStorage.setItem('task', JSON.stringify(task));
+// })
+
 colorChangeViaHour();

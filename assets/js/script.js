@@ -2,14 +2,11 @@
 const yourDate = moment().format("MMMM - Do , YYYY");
 const displayDate = document.getElementById('currentDay')
 const currentHour = moment().format("HH:mm");
-const colorChange = document.querySelectorAll("#colorSwitch");
+const colorChange = document.querySelectorAll(".colorSwitch");
 const timeOfDay = document.querySelectorAll("#timeSlot");
 // array conversions from NodeLists
 const colorChange_arr = Array.prototype.slice.call(colorChange);
 const timeOfDay_arr = Array.prototype.slice.call(timeOfDay);
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
-// displayDate.innerHTML = yourDate;
 
 // This function will display and load current time on HTML
 setInterval(function constTime() {
@@ -29,7 +26,7 @@ function colorChangeViaHour() {
       console.log('past', colorChange_arr[i])
       $(colorChange_arr[i]).addClass("past");
       
-    } else if (parseInt(y) == parseInt(currentHour)) {
+    } else if (parseInt(y) === parseInt(currentHour)) {
       console.log('present', colorChange_arr[i])
       $(colorChange_arr[i]).addClass("present");
       
@@ -39,12 +36,22 @@ function colorChangeViaHour() {
     }
   }
 }
+// loop to cycle through and restore localstorage item
+for (let i=1; i < 9; i++) {
+        $("#" + i).val(localStorage.getItem(i))
+    }
+// function to store textarea data per time cell. 
+function getData() {
+  $("button").click(function () {
+    console.log("clicked");
+    var task = $(this).siblings("textarea").val()
+    var data = $(this).siblings("textarea").attr("id")
+    localStorage.setItem(data,task)
+  });
+}
 
-
-// $("button").click(function () {
-//   console.log("clicked");
-//   var task = document.getElementById('#btn')
-//   localStorage.setItem('task', JSON.stringify(task));
-// })
-
+// calls 
+getData();
 colorChangeViaHour();
+
+

@@ -19,7 +19,7 @@ setInterval(function constTime() {
 }, 1000)
 
 // This function will update the color of the textareas via iterating after matching the converted current time
-function updateByTheHour() {
+function colorChangeViaHour() {
   for (i = 0; i < timeOfDay_arr.length; i++) {
     let x = timeOfDay_arr[i].innerText;
     let y = moment(x, ["h:mm A"]).format("HH:mm")
@@ -40,4 +40,7 @@ function updateByTheHour() {
   }
 }
 
-updateByTheHour();
+$("button").click(function () {
+  console.log("clicked");
+})
+colorChangeViaHour();
